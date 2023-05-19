@@ -1,0 +1,382 @@
+:root {
+  --fs-small-p:1.4rem;
+  --fs-medium-p: 1.5rem;
+  --fs-p:1.6rem;
+  --fs-h1:3.8rem;
+  --fs-h2: 4.8rem;
+  --fs-h3: 4rem;
+  --fs-h4: 3.2rem;
+  --fs-h5: 1.8rem;
+
+  --clr-body-cream-white: #FAF8F6;
+  --clr-h1-dark-blue: #172339;
+  --clr-p-gray:#49566D;
+  --clr-cream:#F3EDE7;
+}
+
+@media (min-width:48em) {
+  :root {
+    --fs-small-p:1.6rem;
+    --fs-h1: 5.6rem;
+  }
+}
+
+@media (min-width:90em) {
+  :root {
+    --fs-h1: 7.2rem;
+    --fs-p:1.8rem;
+    --fs-h3: 4.8rem;
+    --fs-h5: 2rem;
+  }
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior:smooth;
+}
+
+html {
+  font-size: 62.5%;
+  font-family:'Epilogue';
+}
+/* Set core body defaults */
+body {
+  background-color: var(--clr-body-cream-white) ;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* typograpy, fonts*/
+.small-p {
+  font-size: var(--fs-small-p);
+  padding: 0.75rem 1rem;
+  color: var(--clr-h1-dark-blue);
+}
+
+.meium-p {
+  font-size: var(--fs-medium-p);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  color: var(--clr-h1-dark-blue);
+  font-weight: 700;
+}
+
+p {
+  font-size: var(--fs-p);
+  color: var(--clr-p-gray);
+  font-weight: 400;
+}
+
+h5 {
+  font-size: var(--fs-h5);
+  color: var(--clr-body-cream-white);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  color: var(--clr-h1-dark-blue);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: 400;
+  color: var(--clr-body-cream-white);
+}
+
+.two {
+  --clr-body-cream-white: var(--clr-cream);
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+/* header */
+header {
+  width: 95%;
+  /* max-width: 90em; */
+  display: flex;
+  justify-content: space-between;
+  margin: 1.188rem auto;
+}
+
+/* main */
+main {
+  width: 95%;
+  /* max-width: 90em; */
+  margin: 6.1rem auto 0 auto;
+}
+
+/* section-1 class="section-one-1,section-one-2*/
+.one {
+  display: flex;
+  flex-direction: column;
+  gap: 5.6rem;
+}
+
+.section-one-1 img {
+  width: 18rem;
+  margin-left: auto;
+  padding-right: 4rem;
+}
+
+.section-one-1 h1 {
+  line-height: 4.4rem;
+  letter-spacing: -0.53px;
+  font-weight: 400;
+  color: var(--clr-h1-dark-blue);
+}
+
+.section-one-1 p {
+  margin-top: 3.2rem;
+  line-height: 2.8rem;
+}
+
+.section-one-1 button {
+  background-color: var(--clr-h1-dark-blue);
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-radius: 6px;
+}
+
+.section-one-2{
+  margin-top: 5.6rem;
+}
+
+.section-one-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  text-align: center;
+}
+
+/* media query section one for tablet*/
+@media (min-width:48em) {
+  header{
+    padding: 2.1rem 2.3rem 0 2.3rem;
+  }
+
+  main{
+    padding: 0 2.3rem;
+  }
+
+  .one {
+    position: relative;
+  }
+
+  .line-1{
+    margin-right: 25%;
+    min-width: 40%;
+  }
+
+   .section-one-1{
+    height: 552px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+  }
+
+  .section-one-1 h1{
+    line-height: 6.4rem;
+    letter-spacing: -0.78px;
+  }
+
+  .section-one-1 p {
+    width: 60%;
+    padding: 4rem 0;
+  }
+
+  .section-one-1 button {
+    width: max-content;
+  }
+
+  .section-one-2 img{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    z-index: -99;
+  }
+
+  .section-one-3 {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 9.8rem;
+  }
+}
+
+/* media query section one for desktop*/
+@media (min-width:90em) {
+  header{
+    padding: 5rem 10.313rem 0 10.313rem;
+  }
+
+  main{
+    padding: 0 10.313rem;
+  }
+  .one {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  .section-one-1{
+    
+  }
+
+  .section-one-1 h1{
+    line-height: 7.8rem;
+    letter-spacing: -1px;
+  }
+
+  .section-one-2 img{
+    max-width: 350px;
+    right: 20%;
+  }
+
+  .section-one-3 {
+    width: 190px;
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+/* section two */
+.two {
+  position: relative;
+  background-color: var(--clr-h1-dark-blue);
+  margin-top: 23.7rem;
+  border-radius: 15px;
+  height: 748px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4rem;
+  padding: 0 1rem 4rem 1rem;
+  --clr-p-gray: var(--clr-cream)
+}
+
+.container-two{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4rem;
+}
+
+.line-2 {
+  width: 20%;
+} 
+
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.3rem;
+  background-color: var(--clr-cream);
+  width: 95%;
+  margin: -10rem auto 0 auto;
+  padding-top: 10rem ;
+  padding-bottom: 8rem;
+}
+
+.footer-logo{
+  width: 20%;
+  margin-top: 5.6rem;
+}
+
+.icons {
+  display: flex;
+  gap: 2.8rem;
+}
+
+/* media query section two for tablet*/
+@media (min-width:48em) {
+  .two {
+    margin-top: 35rem;
+    padding: 0 5.8rem 4rem 5.8rem;
+  }
+
+  .line-2 {
+    margin-top: rem;
+    width: 10%;
+  }
+
+  footer {
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-end;
+    align-content: center;
+  }
+}
+
+/* media query section two for desktop*/
+@media (min-width:90em) {
+  .two {
+    flex-direction: row;
+  }
+
+  .container-two{
+    width: 35%;
+    text-align: start;
+    align-items: flex-start;
+  }
+
+  .container-two h5 {
+    line-height: 3.5rem;
+  }
+  
+  footer {
+    padding-left: 10.313rem;
+    padding-right: 10.313rem;
+    padding-top: 50rem;
+    margin: -40rem auto 0 auto;
+  }
+}
